@@ -1,13 +1,12 @@
+import React from "react";
+import Wrapper from 'styled-components';
 
+const ItemListContainer = ({ contenido }) => {
 
-const ItemListContainer = () => {
-
-    return(
+    return (
         <>
             <div>
-                <p>
-                    Prueba de texto
-                </p>
+                {contenido}
             </div>
         </>
     );
