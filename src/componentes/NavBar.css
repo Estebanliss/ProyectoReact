@@ -1,0 +1,44 @@
+.conteinerNavBar{
+    width: 100%;
+    height: 70px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+}
+
+.containerLogo{
+    width: 30%;
+}
+
+.containerLogo img{
+    width: 200px;
+    margin-left: 10%;
+}
+
+.containerCategories{
+    width: 40%;
+}
+
+.containerLogin{
+    width: 30%;
+}
+
+.conteinerUl {
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+}
+
+.conteinerUl li{
+    list-style:none;
+    font-size:12px;
+    cursor: pointer;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.login{
+    justify-content: right;
+    margin-right: 10%;
+    align-items: center !important;
+}
