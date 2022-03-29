@@ -5,8 +5,10 @@ import ItemListContainer from '../componentes/ItemListContainer.js';
 function Home() {
   return (
     <>
-      <NavBar />
-      <ItemListContainer  contenido="Texto de prueba"/>
+      <div>
+        <NavBar />
+        <ItemListContainer contenido="Texto de prueba" />
+      </div>
     </>
   );
 }

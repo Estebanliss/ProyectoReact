@@ -1,15 +1,17 @@
-import React from "react";
-import Wrapper from 'styled-components';
-
-const ItemListContainer = ({ contenido }) => {
+const ItemListContainer = ( props ) => {
 
     return (
-        <>
-            <div>
-                {contenido}
-            </div>
-        </>
+
+        <div>
+            <p>Esto sería lo que trae por props: "{props.contenido}"</p>
+        </div>
+
     );
 };
 
 export default ItemListContainer;
+
+
+
+
+
