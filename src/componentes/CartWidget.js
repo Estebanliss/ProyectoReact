@@ -1,5 +1,6 @@
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
-import { Badge }  from '@material-ui/core';
+import { Badge } from '@material-ui/core';
+import '../styles/CartWidget.css';
 
 
 const CartWidget = () => {

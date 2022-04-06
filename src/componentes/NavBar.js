@@ -1,9 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
-import Logo from "../imagenes/Logo.svg";
+import Logo from "../imagenes/LogoComic.svg";
 import CartWidget from "./CartWidget";
-
-
-import "./NavBar.css"
+import '../styles/NavBar.css';
 
 const NavBar = () => {
 
@@ -15,9 +13,9 @@ const NavBar = () => {
                 </div>
                 <div className="containerCategories">
                     <ul className="conteinerUl">
-                        <li>Living</li>
-                        <li>Room</li>
-                        <li>Yard</li>
+                        <li>Comics</li>
+                        <li>Juegos</li>
+                        <li>Novedades</li>
                     </ul>
                 </div>
                 <div className="containerLogin">
