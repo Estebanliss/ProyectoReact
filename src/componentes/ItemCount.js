@@ -15,7 +15,7 @@ const ProductQuantity = styled.div`
     margin: 5px;
 `;
 
-const ItemCount = ({ stock = 5, initial = 1, onAdd }) => {
+const ItemCount = ({ stock, initial, onAdd }) => {
     const [count, setCount] = useState([]);
 
     useEffect(() => {
