@@ -1,16 +1,17 @@
+const ItemListContainer = ( props ) => {
 
+    return (
 
-const ItemListContainer = () => {
+        <div>
+            <p>Esto sería lo que trae por props: "{props.contenido}"</p>
+        </div>
 
-    return(
-        <>
-            <div>
-                <p>
-                    Prueba de texto
-                </p>
-            </div>
-        </>
     );
 };
 
 export default ItemListContainer;
+
+
+
+
+
