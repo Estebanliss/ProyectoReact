@@ -9,7 +9,7 @@ function Home() {
       <div>
         <NavBar />
         <ItemListContainer contenido="Texto de prueba" />
-        <ItemCount />
+        <ItemCount stock={5} initial={1} />
       </div>
     </>
   );
