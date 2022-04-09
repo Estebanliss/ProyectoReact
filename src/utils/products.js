@@ -77,7 +77,84 @@ const products = [
       categoryId: "Game",
       Rating: "Rated T+",
     },
-
+    {
+      id: 7,
+      name: "Welcome to Knowhere | Marvel's Guardians of the Galaxy",
+      stock: 232,
+      cost: 10.99,
+      description: "Oh, flark! There’s even more music from Marvel’s Guardians of the Galaxy?! Turn the volume to eleven and get your galactic grove on with Marvel’s Guardians of the Galaxy: Welcome to Knowhere EP Original Video Game Soundtrack, available to stream.",
+      image: [
+        "https://terrigen-cdn-dev.marvel.com/content/prod/1x/marvelsguardiansofthegalaxy_lob_crd_02.jpg"
+      ],
+      sales: 1.122,
+      categoryId: "Game",
+      Rating: "Rated T+",
+    },
+    {
+      id: 8,
+      name: "An Exclusive Look At MARVEL Future Revolution",
+      stock: 232,
+      cost: 10.99,
+      description: "A new future begins! We're giving you an exclusive look at the upcoming MARVEL Future Revolution, our first open world action RPG on mobile, now! Pre-register here: https://netmarble.sng.link/D80n1/5teu ",
+      image: [
+        "https://terrigen-cdn-dev.marvel.com/content/prod/1x/futurerevolution_lob_crd_01.jpg"
+      ],
+      sales: 1.122,
+      categoryId: "Game",
+      Rating: "Rated T+",
+    },
+    {
+      id: 9,
+      name: "Marvel's Avengers: The MODOK Threat Trailer",
+      stock: 232,
+      cost: 10.99,
+      description: "People around the world have turned their backs on the Avengers. Ms. Marvel must reassemble her idols while facing AIM's leader, George Tarleton, who has his own vision for the future.",
+      image: [
+        "https://terrigen-cdn-dev.marvel.com/content/prod/1x/marvelsavengers_lob_crd_01_0.jpg"
+      ],
+      sales: 1.122,
+      categoryId: "Game",
+      Rating: "Rated T+",
+    },
+    {
+      id: 10,
+      name: "Marvel's Spider-Man: Miles Morales | Launch Trailer",
+      stock: 232,
+      cost: 10.99,
+      description: "The latest adventure in the Spider-Man universe will build on and expand ‘Marvel’s Spider-Man’ through an all-new story. Players will experience the rise of Miles Morales as he masters new powers to become his own Spider-Man.",
+      image: [
+        "https://terrigen-cdn-dev.marvel.com/content/prod/1x/msmmm_lob_crd_02_0.jpg"
+      ],
+      sales: 1.122,
+      categoryId: "Game",
+      Rating: "Rated T+",
+    },
+    {
+      id: 11,
+      name: "Marvel Contest of Champions",
+      stock: 232,
+      cost: 10.99,
+      description: "Iron Man vs. Captain America! Hulk vs. Wolverine! Drax vs. Deadpool! The greatest battles in Marvel history are in your hands! The greedy Elder of the Universe known as The Collector has summoned you to a brawl of epic proportions against a line-up of vile villains including Thanos, Kang the Conqueror, and many more! Experience the ultimate free-to-play fighting game on your mobile device… Contest of Champions! Who's on your team?",
+      image: [
+        "https://terrigen-cdn-dev.marvel.com/content/prod/1x/marvelcontestofchapions_lob_crd_01_0.jpg"
+      ],
+      sales: 1.122,
+      categoryId: "Game",
+      Rating: "Rated T+",
+    },
+    {
+      id: 12,
+      name: "Secret Wars (2015) #2",
+      stock: 232,
+      cost: 10.99,
+      description: "When the Marvel Universe is gone, all that remains is Battleworld! Learn the secrets of this brave new realm in this special oversized issue!",
+      image: [
+        "https://i.annihil.us/u/prod/marvel/i/mg/9/40/5cb737237a2de/clean.jpg"
+      ],
+      sales: 1.122,
+      categoryId: "Comic",
+      Rating: "Rated T+",
+    },
     
   ];
 
