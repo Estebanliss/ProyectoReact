@@ -1,7 +1,8 @@
 import { DescriptionOutlined, InfoOutlined, LocalOfferOutlined } from '@material-ui/icons';
+import { Link } from 'react-router-dom';
 import styled from "styled-components";
 
-const Items = ({ title, stock, price, pictureUrl }) => {
+const Items = ({ id, stock, price, pictureUrl }) => {
 
     const ContainerIcon = styled.div`
         opacity: 0;
@@ -17,7 +18,7 @@ const Items = ({ title, stock, price, pictureUrl }) => {
         justify-content: center;
         transition: all 0.5s ease;
     `;
-    
+
     const ContainerItem = styled.div`
         flex: 1;
         margin: 5px;
@@ -66,8 +67,8 @@ const Items = ({ title, stock, price, pictureUrl }) => {
                 <IconItem>
                     <InfoOutlined /><strong>${stock} unid.</strong>
                 </IconItem>
-                <IconItem style={{ cursor: "pointer" }}>
-                    <DescriptionOutlined /><strong>Details</strong>
+                <IconItem style={{ cursor: "pointer", textDecoration:"none"}}>
+                    <Link to={`/item/${id}`}><DescriptionOutlined /><strong>Details</strong></Link>
                 </IconItem>
             </ContainerIcon>
         </ContainerItem >
