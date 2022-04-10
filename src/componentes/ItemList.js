@@ -2,9 +2,9 @@ import Items from "./Item";
 import styled from "styled-components";
 
 
-const ItemList = ({items}) => {
+const ItemList = ({ items }) => {
 
-    const ProductsContainer = styled.div`
+    const DivEjemplo = styled.div`
         padding: 20px;
         display: flex;
         flex-wrap: wrap;
@@ -12,14 +12,12 @@ const ItemList = ({items}) => {
     `;
 
     return (
-        <ProductsContainer>
+        <DivEjemplo>
             {
-                items.length > 0
-                    ? items.map(item => <Items key={item.id} id={item.id} title={item.name} price={item.cost} pictureUrl={item.image[0]} stock={item.stock} />)
-                    : <p>En proceso de carga...</p>
+                items.length > 0 ? items.map(item => <Items key={item.id} id={item.id} title={item.name} price={item.cost} pictureUrl={item.image[0]} stock={item.stock} />)
+                : <p>En proceso de carga...</p>
             }
-        </ProductsContainer>
-
+        </DivEjemplo>
     )
 }
 
