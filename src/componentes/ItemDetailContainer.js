@@ -4,22 +4,22 @@ import ItemDetail from "../componentes/ItemDetails";
 import { useParams } from "react-router-dom";
 const { products } = require("../utils/products")
 
-const ItemDetailContainer = (props) => {
+const ItemDetailContainer = () => {
 
-    const [datos, setDatos] = useState([]);
+    const [datos, setDatos] = useState({});
     const { idItem } = useParams();
 
 
     useEffect(() => {
-        customFetch(2000, products.find(item => item.id === idItem))
+        customFetch(2000, products.find(item => item.id === parseInt(idItem)))
             .then(result => setDatos(result))
             .catch(error => console.log(error))
-    },  []);
+    }, [idItem]);
 
     return (
 
         <>
-            <ItemDetail items={datos} />
+            <ItemDetail item={datos} />
         </>
 
     );

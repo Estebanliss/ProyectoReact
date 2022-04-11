@@ -8,7 +8,6 @@ const ItemDetail = ({ item }) => {
         background-color: silver;
     `;
 
-
     const ContainerImage = styled.div`
         width:300px;
         background-color: red;
@@ -17,11 +16,6 @@ const ItemDetail = ({ item }) => {
     const Otraimage = styled.img`
         height: 35%;
     `;
-
-    const onAdd = (qty) => {
-        alert("You have selected " + qty + " items.");
-    }
-
     const ContainerDetails = styled.div`
         width: 60%;
         display: flex;
@@ -39,6 +33,13 @@ const ItemDetail = ({ item }) => {
     const Price = styled.h6`
         font-size: 12px;
     `;
+
+
+    const onAdd = (qty) => {
+        alert("You have selected " + qty + " items.");
+    }
+
+    
 
     return (
         <>
