@@ -5,38 +5,57 @@ const ItemDetail = ({ item }) => {
 
     const ContainerGeneral = styled.div`
         width: 70%;
-        background-color: silver;
+        display: flex;
+        margin: auto;
     `;
 
     const ContainerImage = styled.div`
-        width:300px;
-        background-color: red;
+        width: 40%;
+        margin: 0;
+
     `;
 
-    const Otraimage = styled.img`
-        height: 35%;
+    const ProductsImage = styled.img`
+        padding: 20px;
+        width:80%;
+        margin: 0;
     `;
+
     const ContainerDetails = styled.div`
         width: 60%;
-        display: flex;
+        display: column;
+        margin: 0;
     `;
 
     const Title = styled.h1`
-        font-size: 30px;
-        color: black;
+        h1{
+            text-aling: left;
+            width: 80%;
+            font-size: 30px;
+            color: black;
+            margin: 0;
+        }
     `;
 
     const Description = styled.p`
-        font-size: 14px;
+        p{
+            text-aling: left;
+            width: 80%;
+            font-size: 14px;
+            margin: 0;
+        }    
     `;
 
     const Price = styled.h6`
+        text-aling: left;
+        width: 80%;
         font-size: 12px;
+        margin: 0;
     `;
 
 
     const onAdd = (qty) => {
-        alert("You have selected " + qty + " items.");
+        alert("Seleccionaste " + qty + " items.");
     }
 
     
@@ -48,16 +67,17 @@ const ItemDetail = ({ item }) => {
             ?
             < ContainerGeneral >
                 <ContainerImage>
-                    <Otraimage src={item.image[0]} />
+                    <ProductsImage src={item.image[0]} />
                 </ContainerImage>
                 <ContainerDetails>
                     <Title>{item.name}</Title>
                     <Description>${item.description}</Description>
-                    <Price>${item.price}</Price>
+                    <Price>${item.cost}</Price>
+                    <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
                 </ContainerDetails>
-                <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
             </ContainerGeneral>
             : <p>Banca un toque...</p>
+
         }
         </>
     )

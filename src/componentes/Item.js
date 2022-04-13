@@ -2,7 +2,7 @@ import { DescriptionOutlined, InfoOutlined, LocalOfferOutlined } from '@material
 import { Link } from 'react-router-dom';
 import styled from "styled-components";
 
-const Items = ({ id, stock, price, pictureUrl }) => {
+const Items = ({ id, stock, cost, pictureUrl }) => {
 
     const ContainerIcon = styled.div`
         opacity: 0;
@@ -62,7 +62,7 @@ const Items = ({ id, stock, price, pictureUrl }) => {
             <ImageItem src={pictureUrl} />
             <ContainerIcon>
                 <IconItem>
-                    <LocalOfferOutlined /><strong>${price}</strong>
+                    <LocalOfferOutlined /><strong>${cost}</strong>
                 </IconItem>
                 <IconItem>
                     <InfoOutlined /><strong>${stock} unid.</strong>
