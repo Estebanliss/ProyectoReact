@@ -11,7 +11,7 @@ function Home() {
         <NavBar />
       <Routes>
         <Route path='/' element={<ItemListContainer />} />
-        <Route path='/category/id:Category' element={<ItemListContainer />} />
+        <Route path='/category/:categoryId' element={<ItemListContainer />} />
         <Route path='/item/:idItem' element={<ItemDetailContainer />} />
       </Routes>
     </BrowserRouter>
