@@ -9,7 +9,7 @@ const products = [
         "https://i.annihil.us/u/prod/marvel/i/mg/2/90/62432e610ac07/clean.jpg"
       ],
       sales: 10.000,
-      categoryId: "Comic",
+      categoryId: "comic",
       Rating: "Rated T",
     },
     {
@@ -22,7 +22,7 @@ const products = [
         "https://i.annihil.us/u/prod/marvel/i/mg/f/03/62432e8e49266/clean.jpg"
       ],
       sales: 6.300,
-      categoryId: "Comic",
+      categoryId: "comic",
       Rating: "Parental Advisory",
     },
     {
@@ -35,7 +35,7 @@ const products = [
         "https://i.annihil.us/u/prod/marvel/i/mg/9/00/62432ea15bdc9/clean.jpg"
       ],
       sales: 3.122,
-      categoryId: "Comic",
+      categoryId: "comic",
       Rating: "Rated T",
     },
     {
@@ -48,7 +48,7 @@ const products = [
         "https://i.annihil.us/u/prod/marvel/i/mg/9/10/62432e9acd0a8/clean.jpg"
       ],
       sales: 1.122,
-      categoryId: "Comic",
+      categoryId: "comic",
       Rating: "Rated T+",
     },
     {
@@ -61,7 +61,7 @@ const products = [
         "https://i.annihil.us/u/prod/marvel/i/mg/3/f0/62432e4f2879d/clean.jpg"
       ],
       sales: 1.122,
-      categoryId: "Comic",
+      categoryId: "comic",
       Rating: "Rated T+",
     },
     {
@@ -74,7 +74,7 @@ const products = [
         "https://terrigen-cdn-dev.marvel.com/content/prod/1x/midnightsons_lob_crd_02.jpg"
       ],
       sales: 1.122,
-      categoryId: "Game",
+      categoryId: "game",
       Rating: "Rated T+",
     },
     {
@@ -87,7 +87,7 @@ const products = [
         "https://terrigen-cdn-dev.marvel.com/content/prod/1x/marvelsguardiansofthegalaxy_lob_crd_02.jpg"
       ],
       sales: 1.122,
-      categoryId: "Game",
+      categoryId: "game",
       Rating: "Rated T+",
     },
     {
@@ -100,7 +100,7 @@ const products = [
         "https://terrigen-cdn-dev.marvel.com/content/prod/1x/futurerevolution_lob_crd_01.jpg"
       ],
       sales: 1.122,
-      categoryId: "Game",
+      categoryId: "game",
       Rating: "Rated T+",
     },
     {
@@ -113,7 +113,7 @@ const products = [
         "https://terrigen-cdn-dev.marvel.com/content/prod/1x/marvelsavengers_lob_crd_01_0.jpg"
       ],
       sales: 1.122,
-      categoryId: "Game",
+      categoryId: "game",
       Rating: "Rated T+",
     },
     {
@@ -126,7 +126,7 @@ const products = [
         "https://terrigen-cdn-dev.marvel.com/content/prod/1x/msmmm_lob_crd_02_0.jpg"
       ],
       sales: 1.122,
-      categoryId: "Game",
+      categoryId: "game",
       Rating: "Rated T+",
     },
     {
@@ -139,7 +139,7 @@ const products = [
         "https://terrigen-cdn-dev.marvel.com/content/prod/1x/marvelcontestofchapions_lob_crd_01_0.jpg"
       ],
       sales: 1.122,
-      categoryId: "Game",
+      categoryId: "game",
       Rating: "Rated T+",
     },
     {
@@ -152,7 +152,59 @@ const products = [
         "https://i.annihil.us/u/prod/marvel/i/mg/9/40/5cb737237a2de/clean.jpg"
       ],
       sales: 1.122,
-      categoryId: "Comic",
+      categoryId: "comic",
+      Rating: "Rated T+",
+    },
+    {
+      id: 13,
+      name: "Doctor Strange in the Multiverse of Madness",
+      stock: 232,
+      cost: 10.99,
+      description: "Doctor Strange in the Multiverse of Madness —a thrilling ride through the Multiverse with Doctor Strange, his trusted friend Wong and Wanda Maximoff, aka Scarlet Witch. Doctor Strange in the Multiverse of Madness opens in U.S. theaters on May 6, 2022.",
+      image: [
+        "https://terrigen-cdn-dev.marvel.com/content/prod/1x/doctorstrangeinthemultiverseofmadness_lob_crd_02_3.jpg"
+      ],
+      sales: 1.122,
+      categoryId: "comic",
+      Rating: "Rated T+",
+    },
+    {
+      id: 14,
+      name: "Spider-Man: No Way Home",
+      stock: 232,
+      cost: 10.99,
+      description: "https://www.youtube.com/watch?v=ZYzbalQ6Lg8",
+      image: [
+        "https://terrigen-cdn-dev.marvel.com/content/prod/1x/spider-mannowayhome_lob_crd_03.jpg"
+      ],
+      sales: 1.122,
+      categoryId: "comic",
+      Rating: "Rated T+",
+    },
+    {
+      id: 15,
+      name: "Eternals",
+      stock: 232,
+      cost: 10.99,
+      description: "Marvel Studios' Eternals features an exciting new team of Super Heroes in the Marvel Cinematic Universe, ancient aliens who have been living on Earth in secret for thousands of years. Following the events of Avengers: Endgame, an unexpected tragedy forces them out of the shadows to reunite against mankind's most ancient enemy, the Deviants.",
+      image: [
+        "https://terrigen-cdn-dev.marvel.com/content/prod/1x/eternals_lob_crd_06.jpg"
+      ],
+      sales: 1.122,
+      categoryId: "comic",
+      Rating: "Rated T+",
+    },
+    {
+      id: 16,
+      name: "Shang-Chi and The Legend of The Ten Rings",
+      stock: 232,
+      cost: 10.99,
+      description: "Marvel Studios' Shang-Chi and The Legend of The Ten Rings stars Simu Liu as Shang-Chi, who must confront the past he thought he left behind when he is drawn into the web of the mysterious Ten Rings organization. The film also stars Tony Leung as Wenwu, Awkwafina as Shang-Chi's friend Katy and Michelle Yeoh as Jiang Nan, as well as Fala Chen, Meng'er Zhang, Florian Munteanu and Ronny Chieng.",
+      image: [
+        "https://terrigen-cdn-dev.marvel.com/content/prod/1x/shangchi_lob_crd_07.jpg"
+      ],
+      sales: 1.122,
+      categoryId: "comic",
       Rating: "Rated T+",
     },
     
