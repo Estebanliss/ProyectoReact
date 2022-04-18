@@ -152,7 +152,7 @@ const products = [
         "https://i.annihil.us/u/prod/marvel/i/mg/9/40/5cb737237a2de/clean.jpg"
       ],
       sales: 1.122,
-      categoryId: "comic",
+      categoryId: "100",
       Rating: "Rated T+",
     },
     {
@@ -165,7 +165,7 @@ const products = [
         "https://terrigen-cdn-dev.marvel.com/content/prod/1x/doctorstrangeinthemultiverseofmadness_lob_crd_02_3.jpg"
       ],
       sales: 1.122,
-      categoryId: "comic",
+      categoryId: "movie",
       Rating: "Rated T+",
     },
     {
@@ -178,7 +178,7 @@ const products = [
         "https://terrigen-cdn-dev.marvel.com/content/prod/1x/spider-mannowayhome_lob_crd_03.jpg"
       ],
       sales: 1.122,
-      categoryId: "comic",
+      categoryId: "movie",
       Rating: "Rated T+",
     },
     {
@@ -191,7 +191,7 @@ const products = [
         "https://terrigen-cdn-dev.marvel.com/content/prod/1x/eternals_lob_crd_06.jpg"
       ],
       sales: 1.122,
-      categoryId: "comic",
+      categoryId: "movie",
       Rating: "Rated T+",
     },
     {
@@ -204,7 +204,7 @@ const products = [
         "https://terrigen-cdn-dev.marvel.com/content/prod/1x/shangchi_lob_crd_07.jpg"
       ],
       sales: 1.122,
-      categoryId: "comic",
+      categoryId: "movie",
       Rating: "Rated T+",
     },
     

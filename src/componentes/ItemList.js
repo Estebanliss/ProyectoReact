@@ -1,15 +1,8 @@
 import Items from "./Item";
-import styled from "styled-components";
+import { DivEjemplo } from "./StyledComponents"
 
 
 const ItemList = ({ items }) => {
-
-    const DivEjemplo = styled.div`
-        padding: 20px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    `;
 
     return (
         <DivEjemplo>

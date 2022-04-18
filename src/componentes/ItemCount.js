@@ -1,19 +1,7 @@
 import { Button } from '@material-ui/core';
 import { Add, Remove } from '@material-ui/icons';
 import { useEffect, useState } from 'react';
-import styled from "styled-components";
-
-
-const ContainerProducts = styled.div`
-    display: flex;
-    align-items: center;
-    margin: 20px;
-`;
-
-const ProductQuantity = styled.div`
-    font-size: 24px;
-    margin: 5px;
-`;
+import { ContainerProducts, ProductQuantity } from "./StyledComponents"
 
 const ItemCount = ({ stock, initial, onAdd }) => {
     const [count, setCount] = useState([]);
