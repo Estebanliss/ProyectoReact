@@ -1,22 +1,15 @@
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
-import { Badge } from '@material-ui/core';
-import '../styles/CartWidget.css';
+import { IconCartWidget } from "./StyledComponents";
 
 
 const CartWidget = () => {
     return (
         <>
-            <Badge badgeContent={4} color="secondary">
+            <IconCartWidget badgeContent={4} color="secondary">
                 <ShoppingCartOutlinedIcon />
-            </Badge>
+            </IconCartWidget>
         </>
-
-
-
     )
-
-
-
 }
 
 export default CartWidget;

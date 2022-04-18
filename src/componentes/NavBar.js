@@ -1,32 +1,30 @@
 import { Link } from "react-router-dom";
 import Logo from "../imagenes/LogoComic.svg";
 import CartWidget from "./CartWidget";
-import '../styles/NavBar.css';
+import { ConteinerNavBar, ContainerLogo, ContainerCategories, ContainerUl, ContainerUlLogin, ContainerLi, ContainerLogin, ImageProducts } from "./StyledComponents"
 
-const NavBar = ({ categoryId }) => {
-
+const NavBar = () => {
+ 
     return (
         <>
-            <div className="conteinerNavBar">
-                <div className="containerLogo">
-                    <Link to="/"><img src={Logo} alt=""></img></Link>
-                </div>
-                <div className="containerCategories">
-                    <ul className="conteinerUl">
-                    <Link to="/category/comic"><li>Comics</li></Link>
-                    <Link to="/category/game>"><li>Juegos</li></Link>
-                    <Link to="/category/movie"><li>Peliculas</li></Link>
-                </ul>
-            </div>
-            <div className="containerLogin">
-                <ul className="conteinerUl login">
-                    <li>INGRESAR</li>
-                    <CartWidget />
-                </ul>
-            </div>
-
-
-        </div>
+            <ConteinerNavBar>
+                <ContainerLogo>
+                    <Link to="/"><ImageProducts src={Logo} alt=""></ImageProducts></Link>
+                </ContainerLogo>
+                <ContainerCategories>
+                    <ContainerUl>
+                    <Link to="/category/comic" style={{textDecoration: "none", color: "white"}}><ContainerLi>Comics</ContainerLi></Link>
+                    <Link to="/category/game" style={{textDecoration: "none", color: "white"}}><ContainerLi>Juegos</ContainerLi></Link>
+                    <Link to="/category/movie" style={{textDecoration: "none", color: "white"}}><ContainerLi>Peliculas</ContainerLi></Link>
+                    </ContainerUl>
+                </ContainerCategories>
+                <ContainerLogin>
+                    <ContainerUlLogin>
+                        <ContainerLi>INGRESAR</ContainerLi>
+                        <CartWidget />
+                    </ContainerUlLogin>
+                </ContainerLogin>
+            </ConteinerNavBar>
         </>
 
     );
