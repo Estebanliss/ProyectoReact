@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 // CartWidget
 const IconCartWidget = styled(Badge)`
-    .iconCartWidget{
+    {
         color: white;
     }
 
