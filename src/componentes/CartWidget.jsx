@@ -3,6 +3,7 @@ import { IconCartWidget } from "./StyledComponents";
 
 
 const CartWidget = () => {
+
     return (
         <>
             <IconCartWidget badgeContent={4} color="secondary">
