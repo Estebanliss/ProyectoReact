@@ -185,8 +185,105 @@ const ImageProducts = styled.img`
     margin-left: 10%;
 `;
 
+// Cart
 
+const ConteinerCart = styled.div`
+    width: 60%;
+    margin: auto;
+    text-align: center;
+`;
 
+const ButtonCart = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h3{
+        font-weight: 400;
+    }
+`;
+
+const ContainerItemCart = styled.div`
+    display: column;
+    width: 80%;
+`;
+
+const ProductOverview = styled.div`
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+`;
+
+const DetailProduct = styled.div`
+    width: 95%;
+    heigth: 100px;
+    display: flex;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+`;
+
+const PurchaseDetail = styled.div`
+    width: 20%;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 10px;
+    heigth: auto;
+
+    h3{
+        text-align: left;
+    }
+
+    p{
+        text-align: left;
+    }
+
+    h2{
+        text-align: left;
+        margin-top: 50px;
+    }
+
+`;
+
+const ImagePurchase = styled.img`
+    width: 10%;
+    padding: 10px;
+`;
+
+const DetailItem = styled.div`
+    width: 40%;
+    text-align: left;
+    padding: 10px;
+`;
+
+const PriceItem =  styled.div`
+    width: 40%; 
+    text-align: left;
+    padding: 10px; 
+`;
+
+const IconItemCart = styled.div`
+    width: 60px;
+    height: 60px;
+    background-color: #FAFAFA;
+    color: #BFBFBF;
+    border-radius: 50%; 
+    text-align: center;
+    justify-content: center;
+
+    :hover{
+        background-color: #F3F3F3;
+    }
+
+`;
+
+const ButtonCartItem = styled.div`
+    display: flex;
+    align-content: center;
+    align-items: center;
+`;
 
 
 export {
@@ -196,5 +293,6 @@ export {
     ContainerGeneral, ContainerImage, ProductsImage, ContainerDetails, Title, Description, Price,
     DivEjemplo,
     ConteinerNavBar, ContainerLogo, ContainerCategories, ContainerUl, ContainerUlLogin, ContainerLi, ContainerLogin, ImageProducts,
+    ConteinerCart, ButtonCart, ProductOverview, DetailProduct, PurchaseDetail, ImagePurchase, DetailItem, PriceItem, IconItemCart, ContainerItemCart, ButtonCartItem
 
 }
