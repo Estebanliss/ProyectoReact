@@ -1,4 +1,5 @@
-import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
+import React from "react";
+import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
 import { IconCartWidget } from "./StyledComponents";
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
@@ -6,15 +7,15 @@ import { CartContext } from "./CartContext";
 
 const CartWidget = () => {
 
-    const contexProducts = useContext(CartContext);
+	const contexProducts = useContext(CartContext);
 
-    return (
-        <>
-            <IconCartWidget badgeContent={contexProducts.calcItemsQty()} color="secondary">
-                <ShoppingCartOutlinedIcon />
-            </IconCartWidget>
-        </>
-    )
-}
+	return (
+		<>
+			<IconCartWidget badgeContent={contexProducts.calcItemsQty()} color="secondary">
+				<ShoppingCartOutlinedIcon />
+			</IconCartWidget>
+		</>
+	);
+};
 
 export default CartWidget;
