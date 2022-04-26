@@ -287,12 +287,12 @@ const ButtonCartItem = styled.div`
 
 
 export {
-    IconCartWidget,
-    ContainerIcon, ContainerItem, ImageItem, IconItem,
-    ContainerProducts, ProductQuantity,
-    ContainerGeneral, ContainerImage, ProductsImage, ContainerDetails, Title, Description, Price,
-    DivEjemplo,
-    ConteinerNavBar, ContainerLogo, ContainerCategories, ContainerUl, ContainerUlLogin, ContainerLi, ContainerLogin, ImageProducts,
-    ConteinerCart, ButtonCart, ProductOverview, DetailProduct, PurchaseDetail, ImagePurchase, DetailItem, PriceItem, IconItemCart, ContainerItemCart, ButtonCartItem
+	IconCartWidget,
+	ContainerIcon, ContainerItem, ImageItem, IconItem,
+	ContainerProducts, ProductQuantity,
+	ContainerGeneral, ContainerImage, ProductsImage, ContainerDetails, Title, Description, Price,
+	DivEjemplo,
+	ConteinerNavBar, ContainerLogo, ContainerCategories, ContainerUl, ContainerUlLogin, ContainerLi, ContainerLogin, ImageProducts,
+	ConteinerCart, ButtonCart, ProductOverview, DetailProduct, PurchaseDetail, ImagePurchase, DetailItem, PriceItem, IconItemCart, ContainerItemCart, ButtonCartItem
 
-}
+};
