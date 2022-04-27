@@ -1,7 +1,11 @@
 import React from "react";
 
 const FormatNumber = (number) => {
-	return <span>{new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(number)}</span>;
+  return (
+    <span>
+      {new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(number)}
+    </span>
+  );
 };
 
 export default FormatNumber;
