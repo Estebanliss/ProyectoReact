@@ -21,7 +21,6 @@ const ContexProvider = ({ children }) => {
         },
       ]);
     } else {
-      //al encontrarlo, entonces aumentamos el qty de ese producto
       searchProducts.qtyItem += qty;
     }
   };
@@ -56,8 +55,6 @@ const ContexProvider = ({ children }) => {
 
   const calcTaxes = () => {
     let Taxes = calcSubTotal() * 0.21;
-
-    console.log(calcSubTotal());
 
     return Taxes.toFixed(2);
   };
