@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { doc, getDoc } from "firebase/firestore";
 
 import db from "../utils/firebaseConfig";
-console.log(db);
+console.log("Console.log de db en ItemDetailContainer", db);
 
 import ItemDetail from "./ItemDetails";
 
@@ -14,14 +14,12 @@ const ItemDetailContainer = () => {
 
   useEffect(() => {
     const fetchDataProducts = async () => {
-      const docRef = doc(db, "name", "cost", "description", "stock");
+      const docRef = doc(db, "products", idItem);
       const docSnap = await getDoc(docRef);
 
-      if (docSnap.exists()) {
-        console.log("Document data:", docSnap.data());
-      } else {
-        console.log("No such document!");
-      }
+      console.log(docSnap.data());
+
+      return docSnap.data();
     };
 
     fetchDataProducts()
