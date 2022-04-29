@@ -25,12 +25,14 @@ const ItemDetail = ({ item }) => {
     contexProducts.productsCart(item, qty);
   };
 
+  console.log(item.image);
+
   return (
     <>
       {item && item.image ? (
         <ContainerGeneral>
           <ContainerImage>
-            <ProductsImage src={item.image[0]} />
+            <ProductsImage src={item.image} />
           </ContainerImage>
           <ContainerDetails>
             <Title>{item.name}</Title>

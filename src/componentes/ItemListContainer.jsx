@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { collection, getDocs } from "firebase/firestore";
 
 import db from "../utils/firebaseConfig";
-console.log(db);
+console.log("Console.log de db en ItemListContainer", db);
 
 import ItemList from "./ItemList";
 
@@ -27,7 +27,7 @@ const ItemListContainer = () => {
     fetchFromFirestore()
       .then((result) => setDatos(result))
       .catch((error) => console.log(error));
-  }, [categoryId]);
+  }, [datos]);
 
   useEffect(() => {
     return () => {
