@@ -59,7 +59,7 @@ function Cart() {
                   </p>
                   <p>
                     Price:
-                    <b>{contexProducts.calcTotalPerItem(item.idItem)}</b>
+                    <b>${contexProducts.calcTotalPerItem(item.idItem)}</b>
                   </p>
                 </PriceItem>
                 <ButtonCartItem>
@@ -83,11 +83,11 @@ function Cart() {
             </p>
             <p>
               IVA:
-              <b>{contexProducts.calcTaxes()}</b>
+              <b>${contexProducts.calcTaxes()}</b>
             </p>
             <h2>
               Total:
-              <b>{contexProducts.calcSubTotal()}</b>
+              <b>${contexProducts.calcSubTotal()}</b>
             </h2>
           </PurchaseDetail>
         )}

@@ -10,6 +10,7 @@ const ItemList = ({ items }) => {
         items.map((item) => (
           <Items
             key={item.id}
+            cost={item.cost}
             id={item.id}
             pictureUrl={item.image[0]}
             price={item.cost}

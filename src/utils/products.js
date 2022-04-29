@@ -144,7 +144,7 @@ const products = [
       "When the Marvel Universe is gone, all that remains is Battleworld! Learn the secrets of this brave new realm in this special oversized issue!",
     image: ["https://i.annihil.us/u/prod/marvel/i/mg/9/40/5cb737237a2de/clean.jpg"],
     sales: 1.122,
-    categoryId: "100",
+    categoryId: "comic",
     Rating: "Rated T+",
   },
   {

@@ -15,10 +15,10 @@ const Items = ({ id, stock, cost, pictureUrl }) => {
         </IconItem>
         <IconItem>
           <InfoOutlined />
-          <strong>${stock} unid.</strong>
+          <strong>{stock} unid.</strong>
         </IconItem>
-        <IconItem style={{ cursor: "pointer", textDecoration: "none" }}>
-          <Link to={`/item/${id}`}>
+        <IconItem style={{ cursor: "pointer" }}>
+          <Link style={{ textDecoration: "none" }} to={`/item/${id}`}>
             <DescriptionOutlined />
             <strong>Details</strong>
           </Link>
