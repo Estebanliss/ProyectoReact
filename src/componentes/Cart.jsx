@@ -2,6 +2,9 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@material-ui/core";
 import DeleteIcon from "@material-ui/icons/Delete";
+import { serverTimestamp } from "firebase/firestore";
+
+import { createOrderInFirestore } from "../utils/firestoreFetch";
 
 import { CartContext } from "./CartContext";
 import {
@@ -19,6 +22,34 @@ import {
 
 function Cart() {
   const contexProducts = useContext(CartContext);
+
+  const createOrder = () => {
+    let order = {
+      buyer: {
+        name: "Leo Messi",
+        phone: "123456789",
+        email: "leo@messi.com",
+      },
+      items: contexProducts.cartInfo.map((item) => ({
+        id: item.id,
+        price: item.costItem,
+        title: item.nameItem,
+        qty: item.qtyItem,
+        key: item.id,
+      })),
+      date: serverTimestamp(),
+      total: contexProducts.calcTotal(),
+    };
+
+    createOrderInFirestore(order)
+      .then((result) => alert("Tu orden ha sido creada con éxito. "))
+      // eslint-disable-next-line no-console
+      .catch((error) => console.log(error));
+
+    contexProducts.removeList();
+  };
+
+  console.log(contexProducts.cartInfo[0]);
 
   return (
     <ConteinerCart>
@@ -46,8 +77,8 @@ function Cart() {
       <ProductOverview>
         <ContainerItemCart>
           {contexProducts.cartInfo.length > 0 &&
-            contexProducts.cartInfo.map((item) => (
-              <DetailProduct key={item.idItem}>
+            contexProducts.cartInfo.map((item, index) => (
+              <DetailProduct key={index}>
                 <ImagePurchase src={item.imgItem} />
                 <DetailItem>
                   <h3>{item.nameItem}</h3>
@@ -66,7 +97,7 @@ function Cart() {
                   <Button
                     style={{ fontSize: "10px" }}
                     variant="outlined"
-                    onClick={() => contexProducts.deleteItem(item.idItem)}
+                    onClick={() => contexProducts.deleteItem(item.id)}
                   >
                     Quitar
                   </Button>
@@ -89,6 +120,14 @@ function Cart() {
               Total:
               <b>${contexProducts.calcSubTotal()}</b>
             </h2>
+            <Button
+              color="primary"
+              style={{ width: "100%", backgroundColor: "#279E70" }}
+              variant="contained"
+              onClick={createOrder}
+            >
+              Finalizar y pagar
+            </Button>
           </PurchaseDetail>
         )}
       </ProductOverview>

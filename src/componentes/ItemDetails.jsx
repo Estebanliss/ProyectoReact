@@ -25,8 +25,6 @@ const ItemDetail = ({ item }) => {
     contexProducts.productsCart(item, qty);
   };
 
-  console.log(item.image);
-
   return (
     <>
       {item && item.image ? (
