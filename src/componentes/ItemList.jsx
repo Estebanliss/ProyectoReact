@@ -12,7 +12,7 @@ const ItemList = ({ items }) => {
             key={item.id}
             cost={item.cost}
             id={item.id}
-            pictureUrl={item.image[0]}
+            pictureUrl={item.image}
             price={item.cost}
             stock={item.stock}
             title={item.name}

@@ -1,12 +1,10 @@
 import { query, orderBy, where, collection, getDocs } from "@firebase/firestore";
-import { doc, getDoc } from "firebase/firestore";
+import { doc, getDoc, setDoc } from "firebase/firestore";
 
 import db from "./firebaseConfig";
 
 export const firestoreFetch = async (idCategory) => {
   let q;
-
-  console.log("Es Q", q);
 
   if (idCategory) {
     q = query(collection(db, "products"), where("categoryId", "==", idCategory));
@@ -32,6 +30,16 @@ export const firestoreFetchOne = async (idItem) => {
       ...docSnap.data(),
     };
   } else {
-    console.log("Verifica si existe un documento!");
+    // eslint-disable-next-line no-console
+    console.log("No such document!");
   }
+};
+
+export const createOrderInFirestore = async (order) => {
+  const newOrderRef = doc(collection(db, "orders"));
+
+  console.log("Console.log de Firestone", newOrderRef);
+  await setDoc(newOrderRef, order);
+
+  return newOrderRef;
 };
