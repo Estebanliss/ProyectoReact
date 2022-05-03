@@ -13,6 +13,8 @@ import {
   Title,
   Description,
   Price,
+  ContainerButton,
+  Stock,
 } from "./StyledComponents.jsx";
 
 const ItemDetail = ({ item }) => {
@@ -35,16 +37,24 @@ const ItemDetail = ({ item }) => {
           <ContainerDetails>
             <Title>{item.name}</Title>
             <Description>${item.description}</Description>
-            <Price>${item.cost}</Price>
+            <Stock>Stock disponible: {item.stock}</Stock>
+            <Price>Precio: ${item.cost}</Price>
 
             {itemCount === 0 ? (
               <ItemCount initial={itemCount} stock={item.stock} onAdd={onAdd} />
             ) : (
-              <Link style={{ textDecoration: "none" }} to="/cart">
-                <Button color="primary" style={{ marginTop: "20px" }} variant="contained">
-                  Ir al carrito
-                </Button>
-              </Link>
+              <ContainerButton>
+                <Link style={{ textDecoration: "none" }} to="/cart">
+                  <Button color="primary" style={{ marginTop: "20px" }} variant="contained">
+                    Ir al carrito
+                  </Button>
+                </Link>
+                <Link style={{ textDecoration: "none", marginLeft: "10px" }} to="/">
+                  <Button color="primary" variant="outlined">
+                    Seguir comprando
+                  </Button>
+                </Link>
+              </ContainerButton>
             )}
           </ContainerDetails>
         </ContainerGeneral>

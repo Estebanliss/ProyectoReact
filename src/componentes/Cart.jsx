@@ -57,6 +57,7 @@ function Cart() {
     };
 
     createOrderInFirestore(order)
+      // eslint-disable-next-line no-unused-vars
       .then((result) => alert("Tu orden ha sido creada con éxito. "))
       // eslint-disable-next-line no-console
       .catch((error) => console.log(error));
@@ -90,8 +91,8 @@ function Cart() {
       <ProductOverview>
         <ContainerItemCart>
           {contexProducts.cartInfo.length > 0 &&
-            contexProducts.cartInfo.map((item, index) => (
-              <DetailProduct key={index}>
+            contexProducts.cartInfo.map((item) => (
+              <DetailProduct key={item.idItem}>
                 <ImagePurchase src={item.imgItem} />
                 <DetailItem>
                   <h3>{item.nameItem}</h3>
@@ -110,7 +111,7 @@ function Cart() {
                   <Button
                     style={{ fontSize: "10px" }}
                     variant="outlined"
-                    onClick={() => contexProducts.deleteItem(item.id)}
+                    onClick={() => contexProducts.deleteItem(item.idItem)}
                   >
                     Quitar
                   </Button>

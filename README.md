@@ -68,3 +68,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+Pendientes: 
+
+- Archivo README (documentación en formato markdown)
+- Un archivo GIF
+- Sumar stock en el archivo ItemDetailContainer
+- Sumar link al archivo /Cart en el icono del CartWidget
+- Solucionar suma de IVA mas sub total
