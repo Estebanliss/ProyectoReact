@@ -1,35 +1,23 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { doc, getDoc } from "firebase/firestore";
 
-import db from "../utils/firebaseConfig";
+import { firestoreFetchOne } from "../utils/firestoreFetch";
 
 import ItemDetail from "./ItemDetails";
 
 const ItemDetailContainer = () => {
-  const [datos, setDatos] = useState({});
+  const [dato, setDato] = useState({});
   const { idItem } = useParams();
 
   useEffect(() => {
-    const fetchDataProducts = async () => {
-      const docRef = doc(db, "products", idItem);
-      const docSnap = await getDoc(docRef);
-
-      return docSnap.data();
-    };
-
-    fetchDataProducts()
-      .then((result) => setDatos(result))
+    firestoreFetchOne(idItem)
+      .then((result) => setDato(result))
       // eslint-disable-next-line no-console
-      .catch((error) => console.log(error));
+      .catch((err) => console.log(err));
   }, [idItem]);
 
-  return (
-    <>
-      <ItemDetail item={datos} />
-    </>
-  );
+  return <ItemDetail item={dato} />;
 };
 
 export default ItemDetailContainer;
