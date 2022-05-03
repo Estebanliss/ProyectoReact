@@ -2,9 +2,9 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@material-ui/core";
 import DeleteIcon from "@material-ui/icons/Delete";
-import { serverTimestamp } from "firebase/firestore";
+import { collection, increment, serverTimestamp, setDoc, updateDoc, doc } from "firebase/firestore";
 
-import { createOrderInFirestore } from "../utils/firestoreFetch";
+import db from "../utils/firebaseConfig";
 
 import { CartContext } from "./CartContext";
 import {
@@ -24,21 +24,36 @@ function Cart() {
   const contexProducts = useContext(CartContext);
 
   const createOrder = () => {
+    contexProducts.cartInfo.forEach(async (item) => {
+      const itemRef = doc(db, "products", item.idItem);
+
+      await updateDoc(itemRef, {
+        stock: increment(-item.qtyItem),
+      });
+    });
+
     let order = {
       buyer: {
-        name: "Leo Messi",
+        name: "Esteban Lissandrello",
         phone: "123456789",
-        email: "leo@messi.com",
+        email: "esteban@gmail.com",
       },
+      date: serverTimestamp(),
       items: contexProducts.cartInfo.map((item) => ({
-        id: item.id,
+        id: item.idItem,
         price: item.costItem,
         title: item.nameItem,
         qty: item.qtyItem,
-        key: item.id,
       })),
-      date: serverTimestamp(),
       total: contexProducts.calcTotal(),
+    };
+
+    const createOrderInFirestore = async (order) => {
+      const newOrderRef = doc(collection(db, "orders"));
+
+      await setDoc(newOrderRef, order);
+
+      return newOrderRef;
     };
 
     createOrderInFirestore(order)
