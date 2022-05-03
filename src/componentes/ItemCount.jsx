@@ -10,18 +10,22 @@ const ItemCount = ({ stock = 0, initial = 1, onAdd }) => {
 
   useEffect(() => {
     setCount(initial);
+    console.log("set Inicial", initial);
   }, [initial]);
 
   function increment() {
     if (count < stock) {
       setCount(count + 1);
     }
+
+    console.log("sumar", count);
   }
 
   const decrement = () => {
     if (count > initial) {
       setCount(count - 1);
     }
+    console.log("Restar", count);
   };
 
   return (

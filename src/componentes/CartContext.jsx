@@ -13,7 +13,7 @@ const ContexProvider = ({ children }) => {
       setCartInfo([
         ...cartInfo,
         {
-          idItem: item.id,
+          idItem: item.idItem,
           imgItem: item.image,
           nameItem: item.name,
           costItem: item.cost,
