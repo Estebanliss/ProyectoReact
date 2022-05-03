@@ -49,8 +49,6 @@ function Cart() {
     contexProducts.removeList();
   };
 
-  console.log(contexProducts.cartInfo[0]);
-
   return (
     <ConteinerCart>
       <h1>Tu carrito</h1>
