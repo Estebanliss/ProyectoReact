@@ -40,7 +40,9 @@ const NavBar = () => {
         <ContainerLogin>
           <ContainerUlLogin>
             <ContainerLi>INGRESAR</ContainerLi>
-            <CartWidget />
+            <Link to={"/Cart"}>
+              <CartWidget />
+            </Link>
           </ContainerUlLogin>
         </ContainerLogin>
       </ConteinerNavBar>

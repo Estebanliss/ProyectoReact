@@ -1,13 +1,4 @@
-import {
-  query,
-  orderBy,
-  where,
-  collection,
-  getDocs,
-  doc,
-  getDoc,
-  setDoc,
-} from "@firebase/firestore";
+import { query, orderBy, where, collection, getDocs, doc, getDoc } from "@firebase/firestore";
 
 import db from "./firebaseConfig";
 
@@ -42,11 +33,3 @@ export const firestoreFetchOne = async (idItem) => {
     console.log("No existe este documento");
   }
 };
-
-// export const createOrderInFirestore = async (order) => {
-//   const newOrderRef = doc(collection(db, "orders"));
-
-//   await setDoc(newOrderRef, order);
-
-//   return newOrderRef;
-// };

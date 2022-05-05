@@ -121,8 +121,20 @@ const Description = styled.p`
 const Price = styled.h6`
   text-aling: left;
   width: 80%;
-  font-size: 12px;
-  margin: 0;
+  font-size: 16px;
+  margin-top: 10px;
+`;
+
+const Stock = styled.h6`
+  text-aling: left;
+  width: 80%;
+  font-size: 14px;
+  margin-top: 10px;
+`;
+
+const ContainerButton = styled.div`
+  display: flex;
+  align-items: flex-end;
 `;
 
 // ItemList
@@ -315,4 +327,6 @@ export {
   IconItemCart,
   ContainerItemCart,
   ButtonCartItem,
+  ContainerButton,
+  Stock,
 };
