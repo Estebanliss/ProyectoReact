@@ -2,12 +2,13 @@
 Es una tienda online de venta de Comics, Peliculas y Videos juegos del mundo de Marvel. 
 
 ###### Imagen del home
-
+![ItemListContainer](/src/imagenes/Home%20-%20Comicshop.PNG)
 
 ###### Imagen del detalle del producto
-
+![ItemDetailContainer](/src/imagenes/Detalle%20-%20Comicshop.PNG)
 
 ###### Imagen del carrito de compra
+![Cart](/src/imagenes/Carrito%20-%20Comicshop.PNG)
 
 ## EL PROYECTO
 - Este proyecto se inició con [create react app] (blank:#https://github.com/Estebanliss/ProyectoReact).
