@@ -38,7 +38,7 @@ const ContexProvider = ({ children }) => {
   const calcTotalPerItem = (idItem) => {
     let index = cartInfo.map((item) => item.idItem).indexOf(idItem);
 
-    return parseInt((cartInfo[index].costItem * cartInfo[index].qtyItem).toFixed(2));
+    return (cartInfo[index].costItem * cartInfo[index].qtyItem).toFixed(2);
   };
 
   const calcItemsQty = () => {
@@ -48,7 +48,7 @@ const ContexProvider = ({ children }) => {
   };
 
   const calcSubTotal = () => {
-    let totalPerItem = cartInfo.map((item) => calcTotalPerItem(item.idItem));
+    let totalPerItem = cartInfo.map((item) => parseInt(calcTotalPerItem(item.idItem)));
 
     return totalPerItem.reduce((previousValue, currentValue) => previousValue + currentValue, 0);
   };
@@ -60,7 +60,9 @@ const ContexProvider = ({ children }) => {
   };
 
   const calcTotal = () => {
-    return calcSubTotal();
+    let totalFinal = calcSubTotal() + parseInt(calcTaxes());
+
+    return totalFinal.toFixed(2);
   };
 
   return (

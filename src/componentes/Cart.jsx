@@ -58,7 +58,7 @@ function Cart() {
 
     createOrderInFirestore(order)
       // eslint-disable-next-line no-unused-vars
-      .then((result) => alert("Tu orden ha sido creada con éxito. "))
+      .then((result) => alert("Tu orden ha sido creada con éxito con el N° de ID: " + result.id))
       // eslint-disable-next-line no-console
       .catch((error) => console.log(error));
 
@@ -132,7 +132,7 @@ function Cart() {
             </p>
             <h2>
               Total:
-              <b>${contexProducts.calcSubTotal()}</b>
+              <b>${contexProducts.calcTotal()}</b>
             </h2>
             <Button
               color="primary"
